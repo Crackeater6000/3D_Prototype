@@ -12,7 +12,7 @@ public class Move : MonoBehaviour
     void Start()
     {
         _rigidbody = GetComponent<Rigidbody>();
-    }
+    }   
 
     // Update is called once per frame
     void Update()
@@ -24,4 +24,9 @@ public class Move : MonoBehaviour
             _rigidbody.AddForce(new Vector3(0, JumpForce, 0), ForceMode.Impulse);
         }
     }
+
+  
+
+
+
 }
