@@ -7,6 +7,7 @@ public class EnemyMovement : MonoBehaviour
 
     public Transform target;
     float speed = 5.0f;
+    public int health = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -31,5 +32,19 @@ public class EnemyMovement : MonoBehaviour
 
     }
 
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
 
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        //Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
 } 
