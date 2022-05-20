@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1028832187767136283}
   - component: {fileID: -8723393729007254428}
-  - component: {fileID: 4166568138136478569}
   - component: {fileID: 7579415124227444122}
+  - component: {fileID: -6557395647970335857}
+  - component: {fileID: 8387223507909020394}
   m_Layer: 0
   m_Name: bulletPipe
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 363935878783531681}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.452, y: 1.86, z: 1.981}
+  m_LocalPosition: {x: 0.671, y: 1.86, z: 1.84}
   m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_Children:
   - {fileID: 447845786790924611}
@@ -50,20 +51,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &4166568138136478569
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 363935878783531681}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!114 &7579415124227444122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,9 +64,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  damage: 40
   rb: {fileID: -8723393729007254428}
   impactEffect: {fileID: 0}
+--- !u!136 &-6557395647970335857
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363935878783531681}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 716.71234, y: 139.647, z: 0}
+--- !u!65 &8387223507909020394
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363935878783531681}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 132.39526, y: 139.5769, z: 355.94925}
+  m_Center: {x: 717.6603, y: 141.91031, z: -154.00809}
 --- !u!1 &8683289866626794104
 GameObject:
   m_ObjectHideFlags: 0
