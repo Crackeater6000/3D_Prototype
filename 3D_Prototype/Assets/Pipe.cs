@@ -13,11 +13,12 @@ public class Pipe : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.AddForce(new Vector3(0, 0, speed), ForceMode.Impulse);
+        //transform.position += transform.forward * speed * Time.deltaTime;
+        //rb.AddForce(new Vector3(0, 0, speed), ForceMode.Impulse);
     }
     void Update()
     {
-
+        transform.position += transform.forward * speed * Time.deltaTime;
     }
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
