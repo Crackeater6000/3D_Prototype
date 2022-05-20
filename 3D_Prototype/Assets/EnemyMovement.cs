@@ -6,8 +6,8 @@ public class EnemyMovement : MonoBehaviour
 {
 
     public Transform target;
-    float speed = .5f;
-    public int health = 100;
+    float speed = .025f;
+    public static int health = 100;
 
     // Start is called before the first frame update
     void Start()
