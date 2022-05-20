@@ -13,7 +13,7 @@ public class Pipe : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb.AddForce(new Vector3(0, speed, 0), ForceMode.Impulse);
+        rb.AddForce(new Vector3(0, 0, speed), ForceMode.Impulse);
     }
     void Update()
     {
