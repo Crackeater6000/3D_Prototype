@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pipe : MonoBehaviour
 {
     public float speed = 20.0f;
-    public int damage = 40;
+    public static int damage = 40;
     public Rigidbody rb;
     public GameObject impactEffect;
     Vector3 PipeMove;
@@ -20,7 +20,8 @@ public class Pipe : MonoBehaviour
     {
         transform.position += transform.forward * speed * Time.deltaTime;
     }
-    void OnTriggerEnter2D(Collider2D hitInfo)
+
+    void OnTriggerEnter(Collider hitInfo)
     {
         EnemyMovement enemy = hitInfo.GetComponent<EnemyMovement>();
         if (enemy != null)
@@ -28,9 +29,6 @@ public class Pipe : MonoBehaviour
             enemy.TakeDamage(damage);
         }
 
-        //Instantiate(impactEffect, transform.position, transform.rotation);
-
         Destroy(gameObject);
     }
-
 }

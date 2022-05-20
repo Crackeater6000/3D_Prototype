@@ -6,8 +6,8 @@ public class EnemyMovement : MonoBehaviour
 {
 
     public Transform target;
-    float speed = 2.0f;
-    public int health = 100;
+    float speed = .025f;
+    public static int health = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,7 @@ public class EnemyMovement : MonoBehaviour
         //Video where I found how to make an object follow another object https://www.youtube.com/watch?v=jq_TXQ8BGek
 
         transform.LookAt(target.position);
-        transform.Translate(0.0f, 0.0f, speed * Time.deltaTime);
+        transform.Translate(0.0f, 0.0f, speed);
 
 
     }
